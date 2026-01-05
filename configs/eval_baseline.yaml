@@ -1,0 +1,18 @@
+manifest_path: data/processed/kaggle_nnc_manifest_processed.jsonl
+
+# Model
+model_id: openai/whisper-small
+device: cpu            # cpu or cuda
+language: en           # force English transcription; set "" to enable auto-detect
+task: transcribe       # transcribe or translate
+batch_size: 4
+
+# Evaluation
+max_items: 200         # set -1 for full evaluation
+seed: 42
+
+# Output
+out_dir: artifacts/eval/baseline_whisper_small
+write_predictions: true
+append_results_md: true
+results_md_path: reports/RESULTS.md
